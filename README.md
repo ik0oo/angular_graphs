@@ -1,3 +1,3 @@
 # angular_graphs
-# npm build - download dev dependencies
-# npm start - start server
+<p><b>npm build</b> - download dev dependencies</p>
+<p><b>npm start</b> - start server</p>
