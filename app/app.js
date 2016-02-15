@@ -88,8 +88,8 @@ angular
 		dates.then(function (data) {
 			// set data from request
 			$scope.data = data.data;
-			var dateStart = moment($scope.data[0], 'x').format(DATE.format);
-			var dateEnd = moment($scope.data[$scope.data.length - 1], 'x').format(DATE.format);
+			var dateStart = moment($scope.data[0], 'x');
+			var dateEnd = moment($scope.data[$scope.data.length - 1], 'x');
 
 			// set datepicker options
 			$scope.datePicker = {
