@@ -81,6 +81,42 @@ angular
 		}
 	})
 
+	.directive('picker', function () {
+		return {
+			priority: 800,
+			restrict: 'A',
+			require: 'ngModel',
+			link: function (scope, element, attrs, ngModelController) {
+				element.on('blur', function (e) {
+
+
+					//ngModelController.$render();
+					scope.$eval(function () {
+						if (true) {
+							console.log(scope.datePicker);
+							//ngModelController.$modelValue = 12312;
+							scope.datePicker = 123123;
+						}
+					});
+
+				});
+				scope.$on('destroy', function () {
+					element.off('blur');
+				});
+
+				ngModelController.$formatters.unshift(function (value) {
+					console.log(value);
+					return value;
+				});
+
+				ngModelController.$parsers.unshift(function (value) {
+					console.log(value);
+					return value;
+				});
+			}
+		}
+	})
+
 	.controller('datesCtrl', function($scope, datesStorage, DATE) {
 		// chache request
 		var dates = datesStorage.get();

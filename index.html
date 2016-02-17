@@ -16,9 +16,12 @@
 
 			</div>
 			<div class="col-xs-4" text-center>
+				<form action="" name="dateP">
 				<div class="form-group">
-					<input date-range-picker class="form-control date-picker" type="text" ng-model="datePicker" />
+					<input date-range-picker min="'2015-03-15'" picker name="date" class="form-control date-picker" type="text" ng-model="datePicker" />
+					{{datePicker}}
 				</div>
+					</form>
 			</div>
 		</div>
 	</div>
